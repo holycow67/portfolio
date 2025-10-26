@@ -1,4 +1,3 @@
-/* General Styling */
 * {
     margin: 0;
     padding: 0;
@@ -10,18 +9,16 @@
     max-width: 350px; 
     height: 350px; 
     object-fit: cover; 
-    border-radius: 50%; /* <-- INI YANG MEMBUAT GAMBAR JADI LINGKARAN */
-    opacity: 0.9; /* <-- INI YANG MEMBUATNYA SEDIKIT TRANSPARAN */
-    filter: grayscale(30%); /* <-- INI YANG MEMBUATNYA AGAK HITAM-PUTIH */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* <-- INI YANG MEMBERI BAYANGAN */
-    mix-blend-mode: multiply; /* <-- INI KUNCI UNTUK MENYATU DENGAN WARNA BACKGROUND */
+    border-radius: 50%; 
+    opacity: 0.9; 
+    filter: grayscale(30%); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    mix-blend-mode: multiply; 
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    /* [PERUBAHAN] Mengganti warna background */
     background-color: #f0f0f1;
-    /* [PERUBAHAN] Mengganti warna teks utama agar kontras */
     color: #2c2c3a;
     line-height: 1.6;
 }
@@ -32,7 +29,6 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
 header {
     padding: 20px 0;
 }
@@ -46,7 +42,6 @@ header {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    /* [PERUBAHAN] Menyesuaikan warna logo */
     color: #1f1f2e;
     text-decoration: none;
 }
@@ -62,11 +57,10 @@ header {
 }
 
 .main-nav ul li a {
-    /* [PERUBAHAN] Menyesuaikan warna link navigasi */
     color: #3d3d52;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 500; /* Sedikit menebalkan font agar mudah dibaca */
+    font-weight: 500; 
     transition: color 0.3s ease;
 }
 
@@ -75,9 +69,8 @@ header {
 }
 
 .btn-contact {
-    /* [PERUBAHAN] Mengganti warna tombol agar sesuai dengan tema baru */
     background-color: #b6b6d1;
-    color: #ffffff; /* Teks tombol tetap putih agar kontras */
+    color: #ffffff; 
     padding: 10px 25px;
     border-radius: 5px;
     font-weight: 600;
@@ -89,7 +82,6 @@ header {
     color: #ffffff;
 }
 
-/* Hero Section */
 .hero {
     padding: 60px 0;
 }
@@ -108,7 +100,7 @@ header {
     width: 100%;
     max-width: 400px;
     height: auto;
-    border-radius: 10px; /* Optional: adds rounded corners */
+    border-radius: 10px; 
 }
 
 .hero-text {
@@ -120,19 +112,16 @@ header {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
-    /* [PERUBAHAN] Warna headline utama */
     color: #1f1f2e;
 }
 
 .hero-text .highlight {
-    /* [PERUBAHAN] Warna teks yang di-highlight */
     color: #595982;
 }
 
 .hero-text p {
     font-size: 1.1rem;
     max-width: 500px;
-    /* [PERUBAHAN] Warna teks paragraf */
     color: #3d3d52;
 }
 
@@ -149,29 +138,28 @@ header {
     position: relative;
 }
 
-/* Membuat garis bawah dekoratif untuk judul */
 .section-title::after {
     content: '';
     display: block;
     width: 80px;
     height: 4px;
-    background-color: #b6b6d1; /* Warna senada dengan tombol */
+    background-color: #b6b6d1; 
     margin: 10px auto 0;
     border-radius: 2px;
 }
 
 .project-item {
-    background-color: #ffffff; /* Kartu proyek diberi background putih */
+    background-color: #ffffff; 
     padding: 25px;
     border-radius: 8px;
     margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Bayangan halus */
-    border-left: 5px solid #b6b6d1; /* Aksen garis di kiri */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); 
+    border-left: 5px solid #b6b6d1; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
-    transform: translateY(-5px); /* Sedikit terangkat saat disentuh mouse */
+    transform: translateY(-5px); 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -192,7 +180,7 @@ header {
     font-size: 0.9rem;
     color: #595982;
     font-weight: 500;
-    white-space: nowrap; /* Mencegah tanggal terpotong */
+    white-space: nowrap; 
     padding-left: 15px;
 }
 
@@ -200,38 +188,6 @@ header {
     font-size: 1rem;
     color: #3d3d52;
     line-height: 1.7;
-}
-
-/* Penyesuaian untuk layar kecil (mobile) */
-@media (max-width: 768px) {
-    .project-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .project-date {
-        padding-left: 0;
-        margin-top: 5px;
-        background-color: #f0f0f1;
-        padding: 3px 8px;
-        border-radius: 4px;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 3rem;
-    }
-
-    .main-nav ul {
-        display: none; /* Sembunyikan navigasi di layar kecil untuk simpel */
-    }
 }
 
 .socials {
@@ -242,8 +198,8 @@ header {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Agar rapi di layar kecil */
-    margin-top: -20px; /* Mengurangi jarak dengan judul */
+    flex-wrap: wrap; 
+    margin-top: -20px; 
 }
 
 .social-box {
@@ -270,7 +226,6 @@ header {
     margin-right: 15px;
 }
 
-/* Memberi warna khas pada setiap ikon */
 .social-box.linkedin i {
     color: #0A66C2;
 }
@@ -283,14 +238,75 @@ header {
     color: #E4405F;
 }
 
-/* Penyesuaian untuk layar kecil (mobile) */
+.cv-download {
+    padding: 30px 0; 
+}
+
+.cv-button-container {
+    text-align: center;
+    margin-top: -20px; 
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: #1f1f2e; 
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-download:hover {
+    background-color: #353558; 
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-download i {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-date {
+        padding-left: 0;
+        margin-top: 5px;
+        background-color: #f0f0f1;
+        padding: 3px 8px;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .main-nav ul {
+        display: none; 
+    }
+}
+
 @media (max-width: 768px) {
     .social-container {
         flex-direction: column;
-        align-items: stretch; /* Membuat box memenuhi lebar */
+        align-items: stretch; 
     }
     .social-box {
-        justify-content: center; /* Ikon dan teks jadi di tengah */
+        justify-content: center; 
     }
 }
 
